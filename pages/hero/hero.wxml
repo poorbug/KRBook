@@ -1,0 +1,9 @@
+<view class="container">
+  <swiper indicator-dots="{{true}}" autoplay="{{false}}" duration="{{500}}">
+    <block wx:for="{{heros}}">
+      <swiper-item>
+        <view class="pic" style="background-image: url({{item.img}})"></view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
