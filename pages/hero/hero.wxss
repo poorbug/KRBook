@@ -66,6 +66,10 @@ swiper .wx-swiper-dot-active {
   opacity: 0;
 }
 
+.desc view:first-child {
+  margin-bottom: 100rpx;
+}
+
 .attr image {
   width: 20rpx;
   height: 30rpx;

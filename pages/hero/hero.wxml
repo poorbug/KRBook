@@ -7,13 +7,15 @@
           <view class="frame"></view>
           <view class="desc {{show !== heroIdx && 'hidden'}}" bindtap="toggle" data-idx="{{heroIdx}}">
             <view>{{hero.desc}}</view>
-            <view class="attr">
-              <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-heart.png"></image>
-              <block wx:for="{{[1,1,1,1,1,1,1,1]}}" wx:for-index="superIdx">
-                <image wx:if="{{ superIdx < hero.attr[0] }}" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super.png"></image>
-                <image wx:else src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super-empty.png"></image>
-              </block>
-            </view>
+            <block wx:for="{{[0,1,2,3]}}" wx:for-index="attrIdx">
+              <view class="attr">
+                <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-attr-{{attrIdx}}.png"></image>
+                <block wx:for="{{[1,1,1,1,1,1,1,1]}}" wx:for-index="superIdx">
+                  <image wx:if="{{ superIdx < hero.attr[attrIdx] }}" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super.png"></image>
+                  <image wx:else src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super-empty.png"></image>
+                </block>
+              </view>
+            </block>
           </view>
         </view>
       </swiper-item>
