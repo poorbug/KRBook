@@ -10,14 +10,15 @@ swiper {
 swiper .wx-swiper-dot{
   width: 30rpx;
   height: 30rpx; 
-  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-sword.png);
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-dot.png);
   background-size: 100% 100%;
   margin-bottom: 20rpx;
 }
 
 swiper .wx-swiper-dot-active {
-  width: 50rpx;
-  height: 50rpx; 
+  width: 40rpx;
+  height: 40rpx; 
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-dot-active.png);
 }
 
 .item-container {
@@ -53,8 +54,8 @@ swiper .wx-swiper-dot-active {
   color: white;
   font-size: 30rpx;
   padding-top: 300rpx;
-  padding-left: 60rpx;
-  padding-right: 60rpx;
+  padding-left: 80rpx;
+  padding-right: 80rpx;
   box-sizing: border-box;
   text-align: center;
   opacity: 1;
@@ -71,13 +72,13 @@ swiper .wx-swiper-dot-active {
 }
 
 .attr image {
-  width: 20rpx;
-  height: 30rpx;
+  width: 30rpx;
+  height: 40rpx;
   margin: 0 5rpx;
 }
 
 .attr image:first-child {
-  width: 30rpx;
-  height: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
   margin-right: 10rpx;
 }
