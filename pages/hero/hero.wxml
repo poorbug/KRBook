@@ -1,8 +1,21 @@
 <view class="container">
   <swiper indicator-dots="{{true}}" autoplay="{{false}}" duration="{{500}}">
-    <block wx:for="{{heros}}">
+    <block wx:for="{{heros}}" wx:for-item="hero" wx:for-index="heroIdx">
       <swiper-item>
-        <view class="pic" style="background-image: url({{item.img}})"></view>
+        <view class="item-container">
+          <view class="pic" style="background-image: url({{hero.img}})"></view>
+          <view class="frame"></view>
+          <view class="desc {{show !== heroIdx && 'hidden'}}" bindtap="toggle" data-idx="{{heroIdx}}">
+            <view>{{hero.desc}}</view>
+            <view class="attr">
+              <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-heart.png"></image>
+              <block wx:for="{{[1,1,1,1,1,1,1,1]}}" wx:for-index="superIdx">
+                <image wx:if="{{ superIdx < hero.attr[0] }}" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super.png"></image>
+                <image wx:else src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super-empty.png"></image>
+              </block>
+            </view>
+          </view>
+        </view>
       </swiper-item>
     </block>
   </swiper>

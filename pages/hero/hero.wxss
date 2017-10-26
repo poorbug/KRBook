@@ -1,6 +1,79 @@
-swiper,
-swiper-item,
-view {
+swiper {
   width: 100%;
   height: 100%;
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-title.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center 4%;
+}
+
+swiper .wx-swiper-dot{
+  width: 30rpx;
+  height: 30rpx; 
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-sword.png);
+  background-size: 100% 100%;
+  margin-bottom: 20rpx;
+}
+
+swiper .wx-swiper-dot-active {
+  width: 50rpx;
+  height: 50rpx; 
+}
+
+.item-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.desc,
+.frame,
+.pic {
+  width: 74%;
+  height: 74%;
+  position: absolute;
+  top: 15%;
+  left: 13%;
+}
+
+.frame {
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-frame.png);
+  background-size: 100% 100%;
+}
+
+.pic {
+  background-repeat: no-repeat;
+  background-size: 90% 95%;
+  background-position: 30rpx 30rpx;
+}
+
+.desc {
+  display: block;
+  background-color: rgba(0, 0, 0, .5); 
+  color: white;
+  font-size: 30rpx;
+  padding-top: 300rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 1;
+  transition: opacity .4s ease-in-out;
+  box-shadow: 0 0 100rpx 10rpx black;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.attr image {
+  width: 20rpx;
+  height: 30rpx;
+  margin: 0 5rpx;
+}
+
+.attr image:first-child {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
 }
