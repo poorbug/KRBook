@@ -1,0 +1,27 @@
+<template name="msgboard">
+  <view class="msgboard">
+    <scroll-view class="msg-container" scroll-y>
+      <view class="msg">
+        <block wx:for="{{[1,1,1,1,1,1,1,1,1]}}">
+          <view class="msg-item">
+            <view class="msg-item-left">
+              <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/icon.png"></image>
+              <text>1#</text>
+            </view>
+            <view class="msg-item-right">
+              <view>
+                <text>名称</text>
+                <text>2017.01.01 12:12</text>
+              </view>
+              <text>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+    <view class="comment">
+      <input placeholder="评论" />
+      <button>😄</button>
+    </view>
+  </view>
+</template>

@@ -9,5 +9,8 @@ Page({
     this.setData({
       show: e.currentTarget.dataset.idx === this.data.show ? -1 : e.currentTarget.dataset.idx
     })
+  },
+  onShareAppMessage: function () {
+    return require('../../data/share')
   }
 })
