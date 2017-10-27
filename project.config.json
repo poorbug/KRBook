@@ -8,8 +8,8 @@
 	},
 	"compileType": "weapp",
 	"libVersion": "1.6.0",
-	"appid": "touristappid",
-	"projectname": "KRBook",
+	"appid": "wxb2f7365d29bedbc0",
+	"projectname": "KingdomRush",
 	"condition": {
 		"weapp": {
 			"current": -1,

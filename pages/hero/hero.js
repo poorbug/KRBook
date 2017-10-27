@@ -7,7 +7,7 @@ Page({
   },
   toggle: function (e) {
     this.setData({
-      show: e.target.dataset.idx === this.data.show ? -1 : e.target.dataset.idx
+      show: e.currentTarget.dataset.idx === this.data.show ? -1 : e.currentTarget.dataset.idx
     })
   }
 })
