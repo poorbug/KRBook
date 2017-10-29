@@ -1,11 +1,20 @@
 .msgboard {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  height: 80vh;
+  top: 20vh;
+  display: block
+}
+
+.msgboard > image {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 30rpx;
+  top: -60rpx;
 }
 
 .msg-container {
-  height: 100vh;
+  height: 100%;
 }
 
 .msg {
@@ -106,4 +115,8 @@
   font-size: 28rpx;
   padding: 0;
   line-height: 56rpx;
+}
+
+.hidden {
+  display: none;
 }

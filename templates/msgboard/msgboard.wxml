@@ -1,8 +1,9 @@
 <template name="msgboard">
   <view class="msgboard">
+    <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-attr-1.png" bindtap="{{toggle}}"></image>
     <scroll-view class="msg-container" scroll-y>
       <view class="msg">
-        <block wx:for="{{[1,1,1,1,1,1,1,1,1]}}">
+        <block wx:for="{{[1,1,1,1,1,1,1,1,1]}}" wx:key="{{index}}">
           <view class="msg-item">
             <view class="msg-item-left">
               <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/icon.png"></image>
