@@ -63,10 +63,6 @@ swiper .wx-swiper-dot-active {
   box-shadow: 0 0 100rpx 10rpx black;
 }
 
-.hidden {
-  opacity: 0;
-}
-
 .desc view:first-child {
   margin-bottom: 100rpx;
 }

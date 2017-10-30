@@ -1,4 +1,4 @@
 <import src="../../templates/msgboard/msgboard" />
 <view class="container">
-  <template is="msgboard"></template>
+  <template is="msgboard" data="{{ ...msg }}"></template>
 </view>
