@@ -1,18 +1,19 @@
 <view class="container">
-  <swiper indicator-dots="{{true}}" autoplay="{{false}}" duration="{{500}}">
+  <swiper indicator-dots="{{true}}" autoplay="{{false}}" duration="{{500}}" bindchange="swipe">
     <block wx:for="{{heros}}" wx:for-item="hero" wx:for-index="heroIdx">
       <swiper-item>
         <view class="item-container">
           <view class="pic" style="background-image: url({{hero.img}})"></view>
-          <view class="frame"></view>
-          <view class="desc {{show !== heroIdx && 'hidden'}}" bindtap="toggle" data-idx="{{heroIdx}}">
+          <view class="frame" />
+          <image class="gif" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-{{heroIdx}}.gif" mode="aspectFit"/>
+          <view class="desc {{show !== heroIdx && 'transparent'}}" bindtap="toggle">
             <view>{{hero.desc}}</view>
             <block wx:for="{{[0,1,2,3]}}" wx:for-index="attrIdx">
               <view class="attr">
-                <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-attr-{{attrIdx}}.png"></image>
+                <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-attr-{{attrIdx}}.png"/>
                 <block wx:for="{{[1,1,1,1,1,1,1,1]}}" wx:for-index="superIdx">
-                  <image wx:if="{{ superIdx < hero.attr[attrIdx] }}" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super.png"></image>
-                  <image wx:else src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super-empty.png"></image>
+                  <image wx:if="{{ superIdx < hero.attr[attrIdx] }}" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super.png" />
+                  <image wx:else src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-super-empty.png" />
                 </block>
               </view>
             </block>

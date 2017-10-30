@@ -27,14 +27,22 @@ swiper .wx-swiper-dot-active {
   position: relative;
 }
 
+.gif {
+  width: 100%;
+  height: 120rpx;
+  position: absolute;
+  left: 22%;
+  top: 15%;
+}
+
 .desc,
 .frame,
 .pic {
-  width: 74%;
-  height: 74%;
+  width: 64%;
+  height: 64%;
   position: absolute;
   top: 15%;
-  left: 13%;
+  left: 18%;
 }
 
 .frame {
@@ -52,10 +60,10 @@ swiper .wx-swiper-dot-active {
   display: block;
   background-color: rgba(0, 0, 0, .5); 
   color: white;
-  font-size: 30rpx;
-  padding-top: 300rpx;
-  padding-left: 80rpx;
-  padding-right: 80rpx;
+  font-size: 24rpx;
+  padding-top: 200rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
   box-sizing: border-box;
   text-align: center;
   opacity: 1;
@@ -68,13 +76,13 @@ swiper .wx-swiper-dot-active {
 }
 
 .attr image {
-  width: 30rpx;
-  height: 40rpx;
+  width: 20rpx;
+  height: 30rpx;
   margin: 0 5rpx;
 }
 
 .attr image:first-child {
-  width: 40rpx;
-  height: 40rpx;
+  width: 30rpx;
+  height: 30rpx;
   margin-right: 10rpx;
 }

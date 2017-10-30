@@ -15,9 +15,9 @@ page {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .transparent {
-  opacity: 0;
+  opacity: 0 !important;
 }
