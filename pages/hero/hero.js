@@ -1,10 +1,13 @@
+import { Msgboard } from '../../templates/msgboard/msgboard'
 Page({
   data: {
     heros: require('../../data/heros'),
     show: -1,
-    pos: 0
+    pos: 0,
+    msg: { isHide: true }
   },
   onLoad: function () {
+    new Msgboard()
   },
   toggle: function () {
     const { pos, show } = this.data
@@ -19,7 +22,6 @@ Page({
     })
   },
   playAudio: function () {
-    console.log('playAudio')
     const { pos, heros } = this.data
     const idx = Math.floor(Math.random() * heros[pos].audio.length)
     wx.playBackgroundAudio({

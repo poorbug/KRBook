@@ -86,3 +86,11 @@ swiper .wx-swiper-dot-active {
   height: 30rpx;
   margin-right: 10rpx;
 }
+
+.speaker {
+  width: 60rpx;
+  height: 60rpx;
+  position: fixed;
+  right: 3vh;
+  bottom: 7vh;
+}

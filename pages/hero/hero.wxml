@@ -1,3 +1,4 @@
+<import src="../../templates/msgboard/msgboard" />
 <view class="container">
   <swiper indicator-dots="{{true}}" autoplay="{{false}}" duration="{{500}}" bindchange="swipe">
     <block wx:for="{{heros}}" wx:for-item="hero" wx:for-index="heroIdx">
@@ -22,4 +23,6 @@
       </swiper-item>
     </block>
   </swiper>
+  <image class="speaker" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/speaker-1.png" alt="play" bindtap="playAudio" />
+  <template is="msgboard" data="{{ ...msg }}"></template>
 </view>

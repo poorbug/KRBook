@@ -1,7 +1,7 @@
 let _comData = {
-  'msg.isHide': true
+  'msg.isHide': true,
+  'touch': undefined
 }
-
 // let _comEvent = {
 //   msg_isShow: function () {
 //     this.msgShow()
@@ -17,21 +17,33 @@ let _comMethod = {
   },
   msgHide: function () {
     this.setData({ 'msg.isHide': true })
+  },
+  msgTouchStart: function (e) {
+    this.setData({
+      touch: e.touches[0].pageY
+    })
+  },
+  msgMoveUp: function (e) {
+    const { touch, msg } = this.data
+    const pos = e.changedTouches[0].pageY
+    if (msg.isHide || !touch || touch < pos) return ;
+    if (touch - pos > 50) {
+      this.setData({
+        touch: undefined,
+        'msg.isHide': true
+      })
+    }
   }
 }
 
 function Msgboard() {
-  console.log(this)
   let pages = getCurrentPages()
   let curPage = pages[pages.length - 1]
   //组件中调用页面
   this._page = curPage
   Object.assign(curPage,/* _comEvent,*/ _comMethod)
   curPage.setData(_comData)
-
   curPage.msgboard = this
-
-  console.log(this)
   return this
 }
 

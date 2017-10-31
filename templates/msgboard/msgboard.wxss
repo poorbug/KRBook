@@ -11,20 +11,13 @@
   transform: translateY(-100vh);
 }
 
-.msgboard > button {
+.msgboard > .add-comment {
   position: fixed;
   left: 3vh;
-  bottom: -97vh;
+  bottom: -93vh;
   z-index: 1;
-}
-
-.msgboard > image {
-  width: 30rpx;
-  height: 30rpx;
-  position: absolute;
-  right: 30rpx;
-  top: 20%;
-  margin-top: -60rpx;
+  width: 60rpx;
+  height: 60rpx;
 }
 
 .msg-container {
@@ -103,13 +96,14 @@
   height: 80rpx;
   padding: 15rpx 20rpx;
   box-sizing: border-box;
-  background-color: white;
   position: absolute;
   bottom: 0;
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/black-talker.png);
+  background-size: 100% 100%;
 }
 
 .comment input,
-.comment button {
+.comment image {
   display: inline-block;
   height: 50rpx;
   box-sizing: border-box;
@@ -126,7 +120,7 @@
   overflow: hidden;
 }
 
-.comment button {
+.comment image {
   width: 50rpx;
   font-size: 28rpx;
   padding: 0;

@@ -1,7 +1,6 @@
 <template name="msgboard">
   <view class="msgboard {{ isHide && 'msgboard-hidden' }}">
-    <button wx:if="{{ isHide }}" bindtap="msgShow">评论</button>
-    <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-attr-1.png" bindtap="msgHide"></image>
+    <image class="add-comment" bindtap="msgShow" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/blob.png" />
     <scroll-view class="msg-container" scroll-y>
       <view class="msg">
         <block wx:for="{{[1,1,1,1,1,1,1,1,1]}}" wx:key="{{index}}">
@@ -21,9 +20,9 @@
         </block>
       </view>
     </scroll-view>
-    <view class="comment">
+    <view class="comment" bind:touchstart="msgTouchStart" bind:touchmove="msgMoveUp">
       <input placeholder="评论" />
-      <button>😄</button>
+      <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/right.png" alt="icon" />
     </view>
   </view>
 </template>
