@@ -1,6 +1,9 @@
+const app = getApp()
+
 let _comData = {
   'msg.isHide': true,
-  'touch': undefined
+  'touch': undefined, // only user in .js
+  'msg.user': app.globalData.user
 }
 // let _comEvent = {
 //   msg_isShow: function () {
@@ -32,6 +35,24 @@ let _comMethod = {
         touch: undefined,
         'msg.isHide': true
       })
+    }
+  },
+  send: function() {
+    if (!this.data.msg.user) {
+      wx.BaaS.login().then((res) => {
+        app.globalData.user = res
+        console.log('this', this)
+        this.setData({ 
+          'msg.user': res 
+        })
+        // 发送留言
+        console.log('发送留言')
+      }, (err) => {
+        console.log('err', err)
+      })
+    } else {
+      // 发送留言
+      console.log('发送留言')
     }
   }
 }

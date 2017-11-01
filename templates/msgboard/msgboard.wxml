@@ -25,7 +25,7 @@
     </scroll-view>
     <view class="comment" bind:touchstart="msgTouchStart" bind:touchmove="msgMoveUp">
       <input placeholder="评论" />
-      <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/right.png" alt="icon" />
+      <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/{{ !!user ? 'right' : 'close' }}.png" alt="icon" bindtap="send" />
     </view>
   </view>
 </template>
