@@ -4,10 +4,11 @@ Page({
     heros: require('../../data/heros'),
     show: -1,
     pos: 0,
-    msg: { isHide: true }
+    msg: { isHide: true },
+    title: 'hero'
   },
   onLoad: function () {
-    new Msgboard()
+    new Msgboard();
   },
   toggle: function () {
     const { pos, show } = this.data

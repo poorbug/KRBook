@@ -6,25 +6,27 @@
     <image class="link link-r" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/link.png" />
     <scroll-view class="msg-container" scroll-y>
       <view class="msg">
-        <block wx:for="{{[1,1,1,1,1,1,1,1,1]}}" wx:key="{{index}}">
+
+        <block wx:for="{{curMsgs}}" wx:key="{{index}}">
           <view class="msg-item">
             <view class="msg-item-left">
-              <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/icon.png"></image>
-              <text>1#</text>
+              <image src="{{item.icon}}"></image>
+              <!-- <text>1#</text> -->
             </view>
             <view class="msg-item-right">
               <view>
-                <text>名称</text>
-                <text>2017.01.01 12:12</text>
+                <text>{{item.name}}</text>
+                <text>{{item.date}}</text>
               </view>
-              <text>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</text>
+              <text>{{item.content}}</text>
             </view>
           </view>
         </block>
+
       </view>
     </scroll-view>
     <view class="comment" bind:touchstart="msgTouchStart" bind:touchmove="msgMoveUp">
-      <input placeholder="评论" />
+      <input placeholder="留下你伟大的想法" bindinput="handleInput" value="{{input}}" />
       <image src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/{{ !!user ? 'right' : 'close' }}.png" alt="icon" bindtap="send" />
     </view>
   </view>
