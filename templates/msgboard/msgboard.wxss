@@ -23,12 +23,13 @@
 .msg-container {
   height: 80%;
   position: absolute;
-  bottom: 0;
+  bottom: 0;         
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/msgbox.png);
+  background-size: cover;
 }
 
 .msg {
   padding: 20rpx 0;  
-  background-color: rgb(243, 245, 249);
   height: auto;
   overflow: scroll;
   padding-bottom: 100rpx;
@@ -98,7 +99,7 @@
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
-  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/black-talker.png);
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/black-talker-l.png);
   background-size: 100% 100%;
 }
 
@@ -118,6 +119,7 @@
   font-size: 24rpx;
   padding: 0 20rpx;
   overflow: hidden;
+  color: white;
 }
 
 .comment image {
