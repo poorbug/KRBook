@@ -5,6 +5,7 @@
   top: 0;
   display: block;
   transition: transform .4s ease-in-out;
+  background-color: #382713;
 }
 
 .msgboard-hidden {
@@ -21,18 +22,46 @@
 }
 
 .msg-container {
-  height: 80%;
+  height: 85%;
   position: absolute;
-  bottom: 0;         
+  bottom: 70rpx;         
   background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/msgbox.png);
-  background-size: cover;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding: 76rpx 30rpx 30rpx 30rpx;
+}
+
+.msg-title {
+  width: 300rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/title-box-yellow.png);
+  background-size: 100% 100%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 30rpx;
+  transform: translateX(-50%);
+}
+
+.link {
+  width: 40rpx;
+  height: 130rpx;
+  position: absolute;
+}
+
+.link-l {
+  left: 120rpx;
+}
+
+.link-r {
+  right: 120rpx;
 }
 
 .msg {
   padding: 20rpx 0;  
   height: auto;
   overflow: scroll;
-  padding-bottom: 100rpx;
 }
 .msg-item {
   padding: 20rpx 36rpx;
@@ -50,7 +79,7 @@
 }
 
 .msg-item-right {
-  width: 598rpx;
+  width: 538rpx;
   text-align: left;
 }
 

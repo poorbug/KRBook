@@ -1,6 +1,9 @@
 <template name="msgboard">
   <view class="msgboard {{ isHide && 'msgboard-hidden' }}">
     <image class="add-comment" bindtap="msgShow" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/blob.png" />
+    <image class="link link-l" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/link.png" />
+    <div class="msg-title">留言板</div>
+    <image class="link link-r" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/link.png" />
     <scroll-view class="msg-container" scroll-y>
       <view class="msg">
         <block wx:for="{{[1,1,1,1,1,1,1,1,1]}}" wx:key="{{index}}">
