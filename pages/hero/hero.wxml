@@ -6,7 +6,7 @@
         <view class="item-container">
           <view class="pic" style="background-image: url({{hero.img}})"></view>
           <view class="frame" />
-          <image class="gif" src="http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-{{heroIdx}}.gif" mode="aspectFit"/>
+          <div class="gif" style="background-image: url(http://omhr7p9e5.bkt.clouddn.com/microapp/krbook/hero-{{heroIdx}}.gif)" />
           <view class="desc {{show !== heroIdx && 'transparent'}}" bindtap="toggle">
             <view>{{hero.desc}}</view>
             <block wx:for="{{[0,1,2,3]}}" wx:for-index="attrIdx">

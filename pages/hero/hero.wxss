@@ -28,11 +28,13 @@ swiper .wx-swiper-dot-active {
 }
 
 .gif {
-  width: 100%;
+  width: 200rpx;
   height: 120rpx;
   position: absolute;
   left: 22%;
   top: 15%;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .desc,
